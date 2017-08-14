@@ -8,12 +8,12 @@ class PagesTest < ActionDispatch::IntegrationTest
   end
   
   test "Test project page" do
-    get pages_project_url
+    get projects_new_url
     assert_response :success
   end
   
   test "Test task page" do
-    get pages_task_url
+    get tasks_new_url
     assert_response :success
   end
 end
