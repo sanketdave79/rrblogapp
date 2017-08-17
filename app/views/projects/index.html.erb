@@ -1,0 +1,7 @@
+<table class="table">
+<thead></thead><tr><th>Project Name </th><th> Project Description</th></tr></thead>
+<% @projects.each do |project| %>
+<tr><td><%= project.title %></td></tr>
+<tr><td><%= project.description %></td></tr>
+<% end %>
+</table>

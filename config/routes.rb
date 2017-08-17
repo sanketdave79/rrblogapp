@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  get 'projects/new', to:'projects#new'
-  get 'projects/create', to:'projects#create'
+  #get 'projects/new', to:'projects#new'
+  #get 'projects/create', to:'projects#create'
   get 'tasks/new', to:'tasks#new'
   resources :projects
   resources :tasks
