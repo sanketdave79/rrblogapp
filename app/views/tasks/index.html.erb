@@ -1,0 +1,8 @@
+<table class="table">
+<thead></thead><tr><th>Task Name </th><th> Task Description</th></tr></thead>
+<tbody>
+<% @tasks.each do |task| %>
+<tr><td><%= task.title %></td><td><%= task.description %></td></tr>
+<% end %>
+</tbody>
+</table>

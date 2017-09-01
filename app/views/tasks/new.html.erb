@@ -1,5 +1,5 @@
 <h1> New Task</h1>
-<%= form_for :task do |f| %>
+<%= form_for :tasks do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -9,7 +9,15 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </p>
- 
+ <div class="form-group">
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-8">
+            <%= f.collection_check_boxes :projects_id, Project.all, :id, :title do |cb| %>
+              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+            <% end %>
+          </div>
+        </div>
+      </div>
   <p>
     <%= f.submit %>
   </p>
