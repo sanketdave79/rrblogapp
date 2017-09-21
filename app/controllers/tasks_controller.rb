@@ -1,10 +1,10 @@
 class TasksController < ApplicationController
   def new
-    @task = Task.new
+    @tasks = Task.new
   end
   
   def show
-    @task = Task.find(params[:id])
+    @tasks = Task.find(params[:id])
   end
   
   def index
@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   def create
     @tasks = Task.new(tasks_params)
     if @tasks.save
-      redirect_to @tasks
+      redirect_to tasks#show
     else
       render 'new'
     end
@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   
   private
     def tasks_params
-      params.require(:task).permit(:title, :description)
+      params.require(:task).permit(:title, :description, :projects_id)
     end
     
 end

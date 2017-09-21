@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  get '/chat', to: 'chatrooms#show'
   #get 'projects/new', to:'projects#new'
   #get 'projects/create', to:'projects#create'
   #get 'tasks/new', to:'tasks#new'
