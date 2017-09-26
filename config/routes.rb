@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   #get 'tasks/new', to:'tasks#new'
   resources :projects
   resources :tasks
+  resources :users
   root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
