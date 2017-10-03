@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   get 'welcome/index'
   get '/chat', to: 'chatrooms#show'
   #get 'projects/new', to:'projects#new'
