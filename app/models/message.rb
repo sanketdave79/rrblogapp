@@ -1,11 +1,4 @@
 class Message < ApplicationRecord
-  def create
-    
-  end
-  
-  private
-  
-  def message_params
-
-  end
+  belongs_to :user
+  validates :content, presence: true
 end
