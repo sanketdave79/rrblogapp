@@ -8,7 +8,8 @@
     <%= form_for(@message, :html => {class: "form-horizontal", 
                                         role: "form"}) do |f| %>
       <%= f.text_area :content, class: "form-control", 
-                                placeholder: "Say something!" %>
+                                placeholder: "Message!" %>
+      <%= f.hidden_field :user_id, :value => "1"%>
       <%= f.submit "Send", class: 'btn btn-primary' %>
     <% end %>
   </div>
