@@ -2,7 +2,6 @@ class MessagesController < ApplicationController
   def create
     @messages = Message.new(messages_params)
     if @messages.save
-      redirect_to "/chat"
     else
       redirect_to "/chat"
     end
